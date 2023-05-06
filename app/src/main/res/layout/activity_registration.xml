@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.RegistrationActivity"
+    android:background="@color/baseColor">
+
+
+    <EditText
+        android:id="@+id/regLoginText"
+        android:layout_width="228dp"
+        android:layout_height="37dp"
+        android:backgroundTint="@color/accent_color"
+        android:ems="10"
+        android:fontFamily="@font/montserrat_alternates_semibold"
+        android:hint="Логин"
+        android:inputType="textPersonName"
+        android:textColorHint="@color/accent_color"
+        android:textColor="@color/accent_color"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.464"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.759" />
+
+    <EditText
+        android:id="@+id/regPasswordText"
+        android:layout_width="228dp"
+        android:layout_height="37dp"
+        android:backgroundTint="@color/accent_color"
+        android:ems="10"
+        android:fontFamily="@font/montserrat_alternates_semibold"
+        android:hint="Пароль"
+        android:inputType="textPassword"
+        android:textColorHint="@color/accent_color"
+        android:textSize="12dp"
+        android:textColor="@color/accent_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.464"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.865" />
+
+    <EditText
+        android:id="@+id/regEmailText"
+        android:layout_width="228dp"
+        android:layout_height="38dp"
+        android:backgroundTint="@color/accent_color"
+        android:textColor="@color/accent_color"
+        android:ems="10"
+        android:fontFamily="@font/montserrat_alternates_semibold"
+        android:hint="E-mail"
+        android:inputType="textEmailAddress"
+        android:textColorHint="@color/accent_color"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.464"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.812" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:shadowColor="@color/baseColor"
+        android:fontFamily="@font/montserrat_alternates_semibold"
+        android:text="Регистрация"
+        android:textColor="@color/accent_color"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.45"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.061" />
+
+    <ImageView
+        android:id="@+id/reg_imageview"
+        android:layout_width="120dp"
+        android:layout_height="170dp"
+        android:background="@drawable/camera_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.453"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.194" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/baseColor"
+        android:onClick="redactPhoto"
+        android:fontFamily="@font/montserrat_alternates_semibold"
+        android:text="Добавить фото"
+        android:textColor="@color/accent_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.407" />
+
+    <EditText
+        android:id="@+id/regMiddlenameText"
+        android:layout_width="228dp"
+        android:layout_height="38dp"
+        android:backgroundTint="@color/accent_color"
+        android:ems="10"
+        android:fontFamily="@font/montserrat_alternates_semibold"
+        android:hint="Отчество"
+        android:inputType="textPersonName"
+        android:textColorHint="@color/accent_color"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        android:textColor="@color/accent_color"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.575" />
+
+    <EditText
+        android:id="@+id/regFirstnameText"
+        android:layout_width="228dp"
+        android:layout_height="37dp"
+        android:backgroundTint="@color/accent_color"
+        android:ems="10"
+        android:fontFamily="@font/montserrat_alternates_semibold"
+        android:hint="Имя"
+        android:inputType="textPersonName"
+        android:textColorHint="@color/accent_color"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:textColor="@color/accent_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.523" />
+
+    <EditText
+        android:id="@+id/regLastnameText"
+        android:layout_width="228dp"
+        android:layout_height="35dp"
+        android:backgroundTint="@color/accent_color"
+        android:ems="10"
+        android:fontFamily="@font/montserrat_alternates_semibold"
+        android:hint="Фамилия"
+        android:inputType="textPersonName"
+        android:textColorHint="@color/accent_color"
+        android:textSize="12dp"
+        android:textColor="@color/accent_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.469" />
+
+    <EditText
+        android:id="@+id/regDateOfBirthText"
+        android:layout_width="228dp"
+        android:layout_height="37dp"
+        android:backgroundTint="@color/accent_color"
+        android:ems="10"
+        android:fontFamily="@font/montserrat_alternates_semibold"
+        android:hint="Дата рождения"
+        android:inputType="date"
+        android:textColorHint="@color/accent_color"
+        android:textColor="@color/accent_color"
+        android:textSize="12dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.629" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_alternates_semibold"
+        android:text="Пол: "
+        android:textColor="@color/accent_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.238"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.665" />
+
+    <RadioGroup
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.43"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.7"
+        android:orientation="horizontal">
+
+
+    <RadioButton
+        android:id="@+id/regMaleButton"
+        android:layout_width="107dp"
+        android:layout_height="28dp"
+        android:fontFamily="@font/montserrat_alternates_semibold"
+        android:text="Мужской"
+        android:buttonTint="@color/accent_color"
+        android:checked="true"
+        android:textColor="@color/accent_color"
+        tools:layout_editor_absoluteX="87dp"
+        tools:layout_editor_absoluteY="521dp" />
+
+    <RadioButton
+        android:id="@+id/regFemButton"
+        android:layout_width="107dp"
+        android:layout_height="28dp"
+        android:buttonTint="@color/accent_color"
+        android:fontFamily="@font/montserrat_alternates_semibold"
+        android:text="Женский"
+        android:textColor="@color/accent_color"
+        tools:layout_editor_absoluteX="208dp"
+        tools:layout_editor_absoluteY="525dp" />
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="150dp"
+        android:layout_height="33dp"
+        android:fontFamily="@font/montserrat_alternates_semibold"
+        android:text="Регистрация"
+        android:onClick="registrate"
+        android:background="@color/accent_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/regPasswordText" />
+
+    <Button
+        android:layout_width="23dp"
+        android:layout_height="23dp"
+        android:background="@drawable/close_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.93"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.032"
+        android:onClick="toAuth"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

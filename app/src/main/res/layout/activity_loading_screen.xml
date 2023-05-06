@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.LoadingScreenActivity">
+
+    <LinearLayout
+        android:id="@+id/linearFirst"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:background="@color/baseColor"
+        android:gravity="top"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/dateTimeTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:textColor="@color/accent_color"
+            android:textSize="25sp" />
+
+        <ImageView
+            android:id="@+id/cubaImageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:src="@drawable/photo" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/cubaImageView"
+            android:fontFamily="@font/montserrat_alternates_semibold"
+            android:text="Семенова Ульяна Константиновна"
+            android:textAlignment="center"
+            android:textColor="@color/accent_color"
+            android:textSize="25dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_alternates_semibold"
+            android:text="Группа 1202"
+            android:textAlignment="center"
+            android:textColor="@color/accent_color"
+            android:textSize="25dp" />
+    </LinearLayout>
+
+</RelativeLayout>

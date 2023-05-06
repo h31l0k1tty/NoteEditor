@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.AllArticle"
+    android:background="@color/baseColor">
+
+    <EditText
+        android:id="@+id/searchEditText"
+        android:layout_width="184dp"
+        android:layout_height="41dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="68dp"
+        android:textSize="12sp"
+        android:ems="10"
+        android:textColorHint="@color/accent_color"
+        android:backgroundTint="@color/accent_color"
+        android:textColor="@color/accent_color"
+        android:inputType="textPersonName"
+        android:fontFamily="@font/montserrat_alternates_semibold"
+        android:hint="Поиск"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/profileImageView"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/profile_icon" />
+
+    <ImageView
+        android:id="@+id/searchImageView"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="204dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/searchEditText"
+        app:srcCompat="@drawable/search_icon" />
+
+    <TextView
+        android:id="@+id/write_atricle_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_alternates_semibold"
+        android:text="Написать статью"
+        android:textColor="@color/accent_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.107"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.231" />
+
+    <Button
+        android:id="@+id/write_atricle_button"
+        android:layout_width="11dp"
+        android:layout_height="11dp"
+        android:background="@drawable/write_article_icon"
+        android:onClick="toNewArticle"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.009"
+        app:layout_constraintStart_toEndOf="@+id/write_atricle_text"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.236" />
+
+    <TextView
+        android:id="@+id/nameAppTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="16dp"
+        android:textColor="@color/accent_color"
+        android:fontFamily="@font/montserrat_alternates_semibold"
+        android:text="@string/app_name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editTextDate"
+        android:layout_width="178dp"
+        android:backgroundTint="@color/accent_color"
+        android:textColorHint="@color/accent_color"
+        android:textColor="@color/accent_color"
+        android:layout_height="39dp"
+        android:textSize="12sp"
+        android:layout_marginStart="212dp"
+        android:layout_marginTop="68dp"
+        android:ems="10"
+        android:fontFamily="@font/montserrat_alternates_semibold"
+        android:hint="Дата статьи"
+        android:inputType="phone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="370dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/searchEditText">
+
+        <RadioButton
+            android:id="@+id/upRadioButton"
+            android:layout_width="185dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_alternates_semibold"
+            android:text="Сначала новые"
+            android:textColor="@color/accent_color"
+            android:buttonTint="@color/accent_color"/>
+
+        <RadioButton
+            android:id="@+id/downRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/montserrat_alternates_semibold"
+            android:text="Сначала старые"
+            android:buttonTint="@color/accent_color"
+            android:textColor="@color/accent_color"/>
+    </RadioGroup>
+
+    <ImageView
+        android:id="@+id/dateImageView"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/date_icon" />
+
+    <ListView
+        android:id="@+id/ArticlesListView"
+        android:layout_width="383dp"
+        android:layout_height="538dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

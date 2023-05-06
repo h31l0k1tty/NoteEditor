@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.AuthorizationActivity"
+    android:background="@color/baseColor">
+
+    <EditText
+        android:id="@+id/authLoginText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:fontFamily="@font/montserrat_alternates_semibold"
+        android:hint="Логин"
+        android:backgroundTint="@color/accent_color"
+        android:inputType="textPersonName"
+        android:text=""
+        android:textColor="@color/accent_color"
+        android:textColorHint="@color/accent_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.281" />
+
+    <EditText
+        android:id="@+id/authPasswordText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:fontFamily="@font/montserrat_alternates_semibold"
+        android:hint="Пароль"
+        android:backgroundTint="@color/accent_color"
+        android:inputType="textPassword"
+        android:textColor="@color/accent_color"
+        android:textColorHint="@color/accent_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/authLoginText"
+        app:layout_constraintVertical_bias="0.041" />
+
+    <CheckBox
+        android:id="@+id/rememberMeSwitch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:fontFamily="@font/montserrat_alternates_semibold"
+        android:text="Запомнить меня"
+        android:checked="true"
+        android:buttonTint="@color/accent_color"
+        android:textColor="@color/accent_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.392"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/authPasswordText"
+        app:layout_constraintVertical_bias="0.016" />
+
+    <Button
+        android:id="@+id/loginButton"
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:backgroundTint="@color/accent_color"
+        android:onClick="login"
+        android:fontFamily="@font/montserrat_alternates_semibold"
+        android:text="Войти"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.136"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rememberMeSwitch"
+        app:layout_constraintVertical_bias="0.107" />
+
+    <Button
+        android:id="@+id/registrationButton"
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:backgroundTint="@color/accent_color"
+        android:onClick="registrationOnClick"
+        android:fontFamily="@font/montserrat_alternates_semibold"
+        android:text="Регистрация"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.867"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rememberMeSwitch"
+        app:layout_constraintVertical_bias="0.107" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserrat_alternates_semibold"
+        android:text="Авторизация"
+        android:textColor="@color/accent_color"
+        android:textSize="22dp"
+        app:layout_constraintBottom_toTopOf="@+id/authLoginText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.436"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.674"
+        />
+    <Button
+        android:layout_width="23dp"
+        android:layout_height="23dp"
+        android:background="@drawable/close_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.93"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.032"
+        android:onClick="toMain"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

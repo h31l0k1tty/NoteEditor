@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activities.NewArticleActivity"
+    android:background="@color/baseColor">
+
+    <Button
+        android:id="@+id/add"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="40dp"
+        android:backgroundTint="@color/prime_button_color"
+        android:fontFamily="@font/montserrat_alternates_semibold"
+        android:text="Опубликовать"
+        android:textSize="10sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.096"
+        app:layout_constraintStart_toEndOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine3"
+        app:layout_constraintVertical_bias="0.688" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:fontFamily="@font/montserrat_alternates_semibold"
+        android:text="Новая статья"
+        android:textSize="24dp"
+        android:textColor="@color/accent_color"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="294dp"
+        android:layout_height="158dp"
+        android:layout_marginTop="68dp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:srcCompat="@drawable/null_photo_icon" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="165dp"
+        android:fontFamily="@font/montserrat_alternates_semibold"
+        android:layout_height="23dp"
+        android:textColor="@color/accent_color"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="16dp"
+        android:textSize="12sp"
+        android:text="@string/newPhoto"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:srcCompat="@drawable/add_photo_icon" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/montserrat_alternates_semibold"
+        android:ems="10"
+        android:textColor="@color/accent_color"
+        android:backgroundTint="@color/accent_color"
+        android:textColorHint="@color/accent_color"
+        android:inputType="textPersonName"
+        android:hint="Тема"
+        android:maxLength="100"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+    <EditText
+        android:id="@+id/editTextTextMultiLine3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/montserrat_alternates_semibold"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textCapSentences|textMultiLine"
+        android:maxLength="2000"
+        android:textColor="@color/accent_color"
+        android:backgroundTint="@color/accent_color"
+        android:textColorHint="@color/accent_color"
+        android:maxLines="4"
+        android:hint="Текст статьи..."
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="150dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="136dp"
+        android:backgroundTint="@color/secondary_color"
+        android:textSize="10sp"
+        android:fontFamily="@font/montserrat_alternates_semibold"
+        android:text="Черновики"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextMultiLine3" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="19dp"
+        android:layout_height="22dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="28dp"
+        android:onClick="toMain"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/close_icon" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
