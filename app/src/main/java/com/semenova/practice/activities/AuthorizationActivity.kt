@@ -74,7 +74,6 @@ class AuthorizationActivity : AppCompatActivity() {
                             editor.putString("password", "")
                             editor.commit()
                         }
-
                     },
                     { error ->
                         var errorMessage: String = ""
