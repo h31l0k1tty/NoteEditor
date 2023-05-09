@@ -129,7 +129,8 @@
         android:layout_height="22dp"
         android:layout_marginTop="28dp"
         android:layout_marginEnd="28dp"
-        android:onClick="toMain"
+        android:clickable="true"
+        android:onClick="toAllArticles"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/close_icon" />
