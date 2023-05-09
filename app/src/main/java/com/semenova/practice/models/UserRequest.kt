@@ -4,8 +4,8 @@ package com.semenova.practice.models
 class UserRequest(
     firstName: String, lastName: String, middleName: String,
     login: String, password: String, email: String,
-    dateOfBirth: String, role: RoleEnum, gender: GenderEnum,
-    photo: String = "", confirmPassword: String = ""
+    dateOfBirth: String?, role: RoleEnum, gender: GenderEnum,
+    photo: String? = null, confirmPassword: String = ""
 ) {
     var firstName: String = ""
     var lastName: String = ""
@@ -13,10 +13,10 @@ class UserRequest(
     var login: String = ""
     var password: String = ""
     var email: String = ""
-    var dateOfBirth: String = ""
+    var dateOfBirth: String? = null
     var role: String = RoleEnum.User.ordinal.toString()
     var gender: String = GenderEnum.Male.ordinal.toString()
-    var photo: String = ""
+    var photo: String? = null
     var confirmPassword: String = ""
 
     init {
@@ -30,6 +30,6 @@ class UserRequest(
         this.role = role.ordinal.toString()
         this.gender = gender.ordinal.toString()
         this.photo = photo
-        this.confirmPassword = confirmPassword
+        this.confirmPassword = confirmPassword.ifEmpty { password }
     }
 }

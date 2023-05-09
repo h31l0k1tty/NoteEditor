@@ -38,11 +38,11 @@ class RegistrationActivity : AppCompatActivity() {
     lateinit var emailView: EditText
     lateinit var passwordView: EditText
     lateinit var maleButton:RadioButton
-    var photo:String = ""
+    var photo: String? = null
     lateinit var imageView: ImageView
     var photoBytes:ByteArray = byteArrayOf()
     lateinit var client: IApiClient
-    val filePickType:Int = 1
+    val filePickType: Int = 1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -82,7 +82,6 @@ class RegistrationActivity : AppCompatActivity() {
         return lastnameView.text.toString()!=""&&
                 middlenameView.text.toString()!=""&&
                 firstnameView.text.toString()!=""&&
-                dateView.text.toString()!=""&&
                 loginView.text.toString()!=""&&
                 emailView.text.toString()!=""&&
                 passwordView.text.toString()!=""
@@ -119,7 +118,7 @@ class RegistrationActivity : AppCompatActivity() {
         startActivityForResult(intent, filePickType)
     }
     fun makeUser(): UserRequest {
-        if (photoBytes != null)
+        if (photoBytes.isNotEmpty())
             photo =  Base64.encodeToString(photoBytes, Base64.DEFAULT).replace("\n", "")
         val maleButton = findViewById<RadioButton>(R.id.regMaleButton)
         var gender = GenderEnum.Female
