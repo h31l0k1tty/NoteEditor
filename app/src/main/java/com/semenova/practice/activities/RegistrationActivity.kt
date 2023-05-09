@@ -170,12 +170,12 @@ class RegistrationActivity : AppCompatActivity() {
                                 startActivity(intent)
                             },
                             { errors ->
-                                var errorMessage: String = ""
-
-                                errorMessage = (errors as HttpException).message()
-
-                                println(errorMessage)
-
+                                Toast.makeText(
+                                    this@RegistrationActivity,
+                                    "Неизвестная ошибка: ${errors.message}",
+                                    Toast.LENGTH_LONG
+                                )
+                                    .show()
                             }
                         )
                 }
