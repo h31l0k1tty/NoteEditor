@@ -126,11 +126,15 @@ class RegistrationActivity : AppCompatActivity() {
             gender = GenderEnum.Male
         return UserRequest(
             firstnameView.text.toString(),
-            lastnameView.text.toString(), middlenameView.text.toString(),
-            loginView.text.toString(), passwordView.text.toString(),
+            lastnameView.text.toString(),
+            middlenameView.text.toString(),
+            loginView.text.toString(),
+            passwordView.text.toString(),
             emailView.text.toString(),
-            dateView.text.toString(), RoleEnum.User,
-            gender, photo
+            dateView.text.toString().ifEmpty { null },
+            RoleEnum.User,
+            gender,
+            photo
         )
     }
     private fun checkPhotoSize(photo:ByteArray):Boolean {
