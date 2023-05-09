@@ -134,7 +134,6 @@ class RegistrationActivity : AppCompatActivity() {
         )
     }
     private fun checkPhotoSize(photo:ByteArray):Boolean {
-        Toast.makeText(this, photo.size.toString(), Toast.LENGTH_LONG).show()
         return photo.size<2097152
     }
     private fun correctEmail(): Boolean {
