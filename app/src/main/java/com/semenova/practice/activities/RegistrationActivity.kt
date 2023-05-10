@@ -38,11 +38,11 @@ class RegistrationActivity : AppCompatActivity() {
     lateinit var emailView: EditText
     lateinit var passwordView: EditText
     lateinit var maleButton:RadioButton
-    var photo:String = ""
+    var photo: String? = null
     lateinit var imageView: ImageView
     var photoBytes:ByteArray = byteArrayOf()
     lateinit var client: IApiClient
-    val filePickType:Int = 1
+    val filePickType: Int = 1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -82,7 +82,6 @@ class RegistrationActivity : AppCompatActivity() {
         return lastnameView.text.toString()!=""&&
                 middlenameView.text.toString()!=""&&
                 firstnameView.text.toString()!=""&&
-                dateView.text.toString()!=""&&
                 loginView.text.toString()!=""&&
                 emailView.text.toString()!=""&&
                 passwordView.text.toString()!=""
@@ -119,7 +118,7 @@ class RegistrationActivity : AppCompatActivity() {
         startActivityForResult(intent, filePickType)
     }
     fun makeUser(): UserRequest {
-        if (photoBytes != null)
+        if (photoBytes.isNotEmpty())
             photo =  Base64.encodeToString(photoBytes, Base64.DEFAULT).replace("\n", "")
         val maleButton = findViewById<RadioButton>(R.id.regMaleButton)
         var gender = GenderEnum.Female
@@ -127,15 +126,18 @@ class RegistrationActivity : AppCompatActivity() {
             gender = GenderEnum.Male
         return UserRequest(
             firstnameView.text.toString(),
-            lastnameView.text.toString(), middlenameView.text.toString(),
-            loginView.text.toString(), passwordView.text.toString(),
+            lastnameView.text.toString(),
+            middlenameView.text.toString(),
+            loginView.text.toString(),
+            passwordView.text.toString(),
             emailView.text.toString(),
-            dateView.text.toString(), RoleEnum.User,
-            gender, photo
+            dateView.text.toString().ifEmpty { null },
+            RoleEnum.User,
+            gender,
+            photo
         )
     }
     private fun checkPhotoSize(photo:ByteArray):Boolean {
-        Toast.makeText(this, photo.size.toString(), Toast.LENGTH_LONG).show()
         return photo.size<2097152
     }
     private fun correctEmail(): Boolean {
@@ -170,12 +172,12 @@ class RegistrationActivity : AppCompatActivity() {
                                 startActivity(intent)
                             },
                             { errors ->
-                                var errorMessage: String = ""
-
-                                errorMessage = (errors as HttpException).message()
-
-                                println(errorMessage)
-
+                                Toast.makeText(
+                                    this@RegistrationActivity,
+                                    "Неизвестная ошибка: ${errors.message}",
+                                    Toast.LENGTH_LONG
+                                )
+                                    .show()
                             }
                         )
                 }

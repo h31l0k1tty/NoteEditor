@@ -13,4 +13,4 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "Semenova_UK_1202"
-include ':app'
+include ":app"
